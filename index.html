@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shadow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button class="btn" type="button">Кнопка</button>
+<section class="sintaksis">
+    <h3>
+        box-shadow:<br>
+        [inset] — внутренняя<br>
+        5px <— смещение по x<br>
+        10px — смещение по y<br>
+        [2px] — размытие<br>
+        [3px] — растяжение<br>
+        [red]; — цвет<br>
+    </h3>
+</section>
+<section class="grid">
+    <button class="btn2" type="button">Кнопка</button>
+    <p>сместите исходную тень (которую изначально не видно) вправо на 5px</p>
+</section>
+<section class="grid">
+    <button class="btn3" type="button">Кнопка</button>
+    <p>сместите исходную тень вверх на 10px</p>
+</section>
+<section class="grid">
+    <button class="btn4" type="button">Кнопка</button>
+    <p>Третье цифровое значение задаёт радиус размытия тени<br>
+        Чем меньше значение, тем четче тень. Максимальная четкость достигается при нулевом значении.<br>
+        Размытие не может быть отрицательным. Если размытие не указано, то оно равно нулю.<br>
+        Задайте исходной тени размытие 10px.Cместите её вниз на 70px</p>
+</section>
+<section class="grid">
+    <button class="btn5" type="button">Кнопка</button>
+    <p>По умолчанию размер и форма тени такие же, как и у элемента, которому она принадлежит.<br>
+        Но размер тени можно изменить с помощью растяжения.<br>
+        При нулевом (или не указанном) растяжении размер тени такой же, как у элемента.<br>
+        При положительном растяжении размер тени становится больше размера элемента, а при отрицательном — меньше.<br>
+        Задайте исходной тени размытие -5 px.Cместите её вниз на 70px</p>
+</section>
+<section class="grid">
+    <section class="grid-btn">
+        <button class="btn btn6" type="button">Кнопка 6</button>
+        <button class="btn btn7" type="button">Кнопка 7</button>
+        <button class="btn btn8" type="button">Кнопка 8</button>
+        <button class="btn btn9" type="button">Кнопка 9</button>
+    </section>
+    <section>
+        <p>размытие есть, растяжение отрицательное — тень очень светлая;<br>
+            размытие есть, растяжения нет — тень обычная;<br>
+            размытие больше растяжения — тень темнее обычного;<br>
+            размытие меньше растяжения — тень очень темная.
+        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>
+            Задайте первой кнопке размытие 6px, растяжение -2px<br>
+            Второй кнопке размытие 6px<br>
+            Третьей кнопке размытие 6px растяжение 3px<br>
+            Четвёртой кнопке размытие 3px растяжение 6px
+        </p>
+    </section>
+</section>
+<section class="grid">
+    <div class="grid-btn">
+        <div class="light">
+            <button class="btn btn10" type="button">Кнопка</button>
+        </div>
+        <div class="dark">
+            <button class="btn btn11" type="button">Кнопка</button>
+        </div>
+    </div>
+    <section>
+        <p>Цвет тени задается с помощью любого цветового формата CSS. Если цвет тени не задан,<br>
+            то он берётся от цвета текста элемента с тенью</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>У первой кнопки измените цвет тени на white.<br>
+            У второй кнопки измените цвет тени на #2c3e50.
+        </p>
+    </section>
+</section>
+<section class="grid al-center">
+    <div class="grid-btn">
+        <button class="btn btn12" type="button">Кнопка 1</button>
+        <button class="btn btn13" type="button">Кнопка 2</button>
+        <button class="btn btn14" type="button">Кнопка 3</button>
+    </div>
+    <p>Если в box-shadow использовать ключевое слово inset, то тень будет отображаться внутри элемента.<br>
+        inset лучше размещать либо в самом начале свойства, либо в самом конце.</p>
+</section>
+<section class="grid al-center">
+    <div class="grid-btn margin-top">
+        <button class="btn btn15" type="button">Кнопка 1</button>
+        <button class="btn btn16" type="button">Кнопка 2</button>
+    </div>
+    <section>
+        <p>
+            Тень только с одной стороны<br>
+            Для этого нужно задать тени отрицательное растяжение и положительное размытие,<br>
+            а затем сместить тень в нужном направлении. Отрицательное растяжение сделает<br>
+            размытую тень меньше элемента, а смещение покажет край тени только с одной стороны.<br>
+            Подобный приём позволяет имитировать градиенты с помощью внутренних теней.
+        </p>
+        <p>
+            Задайте тени первой кнопки вертикальное смещение 5px и растяжение -3px размытие не меняйте.<br>
+            Задайте тени второй кнопки вертикальное смещение -30px размытие 30px и растяжение -30px
+        </p>
+    </section>
+</section>
+<section class="grid margin-top al-center">
+    <button class="btn btn17" type="button">Кнопка 17</button>
+    <p>Свойство box-shadow позволяет задавать одному элементу несколько теней.<br>
+        Для этого нужно перечислить значения теней через запятую<br>
+        Тени, которые расположены в списке выше, будут перекрывать тени, которые расположены ниже.<br>
+        Первая тень: вертикальное смещение -5px размытие 10px растяжение -3px цвет #3498db<br>
+        Вторая тень: вертикальное смещение 5px размытие 10px растяжение -3px цвет #2ecc71
+    </p>
+</section>
+</body>
+</html>
